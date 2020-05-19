@@ -13,11 +13,11 @@ let lastBuilder;
 const appStateFromQuery = qs.get();
 const appState = {
   hasGraph: false,
-  maxDepth: appStateFromQuery.maxDepth || 2,
+  maxDepth: appStateFromQuery.maxDepth || 3,
   progress: new Progress(),
   graph: null,
   query: appStateFromQuery.query,
-  pattern: appStateFromQuery.pattern || '[query] vs ...'
+  pattern: appStateFromQuery.pattern || '[query] ...'
 }
 
 if (appState.query) {
